@@ -15,7 +15,7 @@ public class Todo {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private String taskContent;
-	private String completionStatus;
+	private boolean completionStatus;
     
 	public Long getId() {
 		return id;
@@ -29,10 +29,10 @@ public class Todo {
 	public void setTaskContent(String taskContent) {
 		this.taskContent = taskContent;
 	}
-	public String getCompletionStatus() {
+	public boolean getCompletionStatus() {
 		return completionStatus;
 	}
-	public void setCompletionStatus(String completionStatus) {
+	public void setCompletionStatus(boolean completionStatus) {
 		this.completionStatus = completionStatus;
 	}
 	
