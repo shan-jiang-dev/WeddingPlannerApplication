@@ -1,6 +1,7 @@
 package com.example.TODOApplication.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
@@ -28,12 +29,25 @@ public class TODORepository {
     		TypedQuery<Todo> typedQuery = entityManager.createQuery("from Todo", Todo.class);
     		return typedQuery.getResultList();
     	}
+    
+    
+    public Optional<Todo> findTODOById(Long id){
+		Todo todo = entityManager.find(Todo.class, id);
+		return Optional.ofNullable(todo);
+    }
+    
+    
     // Indicates that this method runs within a database transaction.
     @Transactional
     public void save(Todo todo) {
-    	
     		entityManager.persist(todo); //  schedules the todo object for insertion into the database.
     		
+    }
+ 
+    
+    @Transactional
+    public void updateTodo(Todo todo) {
+    		entityManager.merge(todo);
     }
 
 }

@@ -3,18 +3,25 @@
 <title>TODO Application</title>
 </head>
 <body>
-
+    <h1>Wedding Todo List</h1>
 	<form action="/addtodo" method="post">
 	 
 	 <input type="text" name="taskContent" placeholder="Write your task">
-	 <button type="submit">ADD TODO</button>
+	 <button type="submit">Add</button>
 	
 	</form>
 	
 	<ul>
        <li th:each="todo : ${listoftodos}">
        
-       		<h4 th:text="${todo.taskContent}"></h4>
+       		<form th:action="@{/updatetodo/{id}(id=${todo.id})}" method="post">
+       		
+	       		<input type="text" th:value="${todo.taskContent}" name="taskContent">
+	       		<input type="checkbox" th:checked="${todo.completionStatus}" name="completionStatus">
+	       		<button type="submit">UPDATE</button>
+	       		
+       		</form>
+       		
        </li>	
 	</ul>
 

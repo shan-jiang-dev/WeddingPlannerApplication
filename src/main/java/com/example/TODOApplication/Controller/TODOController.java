@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -19,8 +20,8 @@ public class TODOController {
 	@Autowired
 	TODOService todoService;
 	
-	
-	@RequestMapping
+	// Model model: Java Object → HTML, pass data from Controller to HTML view
+	@RequestMapping("/")
 	public String getAllTodo(Model model) {
 		List<Todo> listOfTodos = todoService.getAllTodos();
 		model.addAttribute("listoftodos", listOfTodos);
@@ -28,7 +29,7 @@ public class TODOController {
 	}
 	
 	
-    // @ModelAttribute = Automatically binds form data to a Java object
+    // @ModelAttribute = Automatically binds the submitted form data to a Java object, modelAttributes contains all form data
     // @ResponseBody = Return data directly to the client. Without @ResponseBody => Return a view name for Spring to resolve.
 	@RequestMapping(value="/addtodo", method=RequestMethod.POST)
 	@ResponseBody
@@ -39,18 +40,21 @@ public class TODOController {
 		
 	}
 
-//	@RequestMapping
-//	public String loadForm() {
-//		return "task";
-//	}
 	
-	public String updateTodo() {
-		return null;
+	// @ModelAttribute HTML → Java Object， modelAttributes contains all form data
+	@RequestMapping(value="/updatetodo/{id}")
+	public String updateTodo(@PathVariable("id") Long id, @ModelAttribute Todo todo) {
+		todoService.updateTodo(id, todo);
+		return "redirect:/";
 	}
 	
 	public String deleteTodo() {
 		return null;
 	}
 	
+//	@RequestMapping
+//	public String loadForm() {
+//		return "task";
+//	}
 
 }
