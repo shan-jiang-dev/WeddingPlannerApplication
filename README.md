@@ -3,6 +3,26 @@
 
 Tech Stack
 - Backend: Java, Spring Boot, Spring MVC
-- Persistence: Spring Data JPA, Hibernate, JPQL
 - Frontend: Thymeleaf, HTML5, CSS3, Bootstrap
+- Persistence: Spring Data JPA, Hibernate, JPQL
 - Build Tool: Maven
+
+Features
+- Create Tasks: Add new tasks.
+- View Tasks: Display all existing tasks.
+- Update Tasks: Edit task descriptions.
+- Track Completion: Mark tasks as completed using checkboxes.
+- Delete Tasks: Remove tasks using a trash icon.
+
+Architecture
+The application follows a layered architecture:
+- Controller: Handles HTTP requests.
+- Service: Manages business logic.
+- Repository: Handles data access.
+- Entity: Defines task data and persistence mapping.
+- View: Renders dynamic HTML using Thymeleaf.
+
+Getting Started
+Prerequisites
+- Java JDK
+- Maven
