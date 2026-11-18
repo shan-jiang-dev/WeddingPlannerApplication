@@ -36,7 +36,6 @@ public class TODORepository {
 		return Optional.ofNullable(todo);
     }
     
-    
     // Indicates that this method runs within a database transaction.
     @Transactional
     public void save(Todo todo) {
@@ -48,6 +47,15 @@ public class TODORepository {
     @Transactional
     public void updateTodo(Todo todo) {
     		entityManager.merge(todo);
+    }
+    
+    
+    @Transactional
+    public void deleteTODOById(Long id) {
+    		Todo todo = entityManager.find(Todo.class, id);
+    		if (todo != null) {
+    			entityManager.remove(todo);
+    		}
     }
 
 }

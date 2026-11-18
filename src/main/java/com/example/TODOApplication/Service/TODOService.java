@@ -38,5 +38,9 @@ public class TODOService {
 			todoRepository.updateTodo(oldTodo);
 		}
 	}
+	
+	public void deleteTodo(Long id) {
+		todoRepository.deleteTODOById(id);
+	}
 
 }
