@@ -3,22 +3,22 @@
 
 ## Screenshot
 
-![Todo App Homepage](screenshot/homepage.png)
+![Todo App Homepage](screenshots/homepage.png)
 
-Tech Stack
+## Tech Stack
 - Backend: Java, Spring Boot, Spring MVC
 - Frontend: Thymeleaf, HTML5, CSS3, Bootstrap
 - Persistence: Spring Data JPA, Hibernate, JPQL
 - Build Tool: Maven
 
-Features
+## Features
 - Create Tasks: Add new tasks.
 - View Tasks: Display all existing tasks.
 - Update Tasks: Edit task descriptions.
 - Track Completion: Mark tasks as completed using checkboxes.
 - Delete Tasks: Remove tasks using a trash icon.
 
-Architecture
+## Architecture
 The application follows a layered architecture:
 - Controller: Handles HTTP requests.
 - Service: Manages business logic.
