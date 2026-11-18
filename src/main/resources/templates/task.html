@@ -10,6 +10,13 @@
 	 <button type="submit">ADD TODO</button>
 	
 	</form>
+	
+	<ul>
+       <li th:each="todo : ${listoftodos}">
+       
+       		<h4 th:text="${todo.taskContent}"></h4>
+       </li>	
+	</ul>
 
 </body>
 

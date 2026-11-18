@@ -1,7 +1,10 @@
 package com.example.TODOApplication.Controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +19,15 @@ public class TODOController {
 	@Autowired
 	TODOService todoService;
 	
+	
+	@RequestMapping
+	public String getAllTodo(Model model) {
+		List<Todo> listOfTodos = todoService.getAllTodos();
+		model.addAttribute("listoftodos", listOfTodos);
+		return "task";
+	}
+	
+	
     // @ModelAttribute = Automatically binds form data to a Java object
     // @ResponseBody = Return data directly to the client. Without @ResponseBody => Return a view name for Spring to resolve.
 	@RequestMapping(value="/addtodo", method=RequestMethod.POST)
@@ -26,11 +38,11 @@ public class TODOController {
 		return "success";
 		
 	}
-	
-	@RequestMapping
-	public String loadForm() {
-		return "task";
-	}
+
+//	@RequestMapping
+//	public String loadForm() {
+//		return "task";
+//	}
 	
 	public String updateTodo() {
 		return null;
@@ -40,7 +52,5 @@ public class TODOController {
 		return null;
 	}
 	
-	public String getAllTodo() {
-		return null;
-	}
+
 }

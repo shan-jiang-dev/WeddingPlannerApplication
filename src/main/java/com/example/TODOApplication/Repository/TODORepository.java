@@ -1,11 +1,14 @@
 package com.example.TODOApplication.Repository;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.example.TODOApplication.Entity.Todo;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.TypedQuery;
 import jakarta.transaction.Transactional;
 
 
@@ -20,6 +23,11 @@ public class TODORepository {
 	private EntityManager entityManager; 
   
     
+    public List<Todo> findAll() {
+    		// HQL Query
+    		TypedQuery<Todo> typedQuery = entityManager.createQuery("from Todo", Todo.class);
+    		return typedQuery.getResultList();
+    	}
     // Indicates that this method runs within a database transaction.
     @Transactional
     public void save(Todo todo) {
