@@ -1,4 +1,4 @@
-<h1>Wedding Planer Web Application</h1>
+<h1>Wedding Planner Web Application</h1>
 <p>A full-stack wedding task management web application built with Java and Spring Boot. Users can create, view, update, complete, and delete tasks through a simple, responsive interface.</p>
 
 ## Homepage Screenshot
