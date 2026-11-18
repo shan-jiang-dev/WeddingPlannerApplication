@@ -17,18 +17,14 @@ body {
 h1 {
     color: #76534a;
     font-size: 42px;
-    font-weight: bold;
     margin-bottom: 0px;
     margin-top: 30px;
-}
-
-h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 2.5rem;
+    font-family: Georgia, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 .wedding-logo {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: Georgia, serif;
     font-size: 42px;
     color: #b89a5a;
     border: 2px solid #b89a5a;
