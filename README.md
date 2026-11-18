@@ -36,7 +36,7 @@ Run Locally
 
 git clone https://github.com/shan-jiang-dev/WeddingPlannerApplication.git
 
-cd TODOApplication
+cd WeddingPlannerApplication
 
 mvn spring-boot:run
 
