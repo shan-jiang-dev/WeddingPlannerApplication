@@ -8,6 +8,7 @@
 ## Tech Stack
 - Backend: Java, Spring Boot, Spring MVC
 - Frontend: Thymeleaf, HTML5, CSS3, Bootstrap
+- Database: MySQL
 - Persistence: Spring Data JPA, Hibernate, JPQL
 - Build Tool: Maven
 
