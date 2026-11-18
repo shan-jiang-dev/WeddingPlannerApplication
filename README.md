@@ -22,7 +22,7 @@ The application follows a layered architecture:
 - Entity: Defines task data and persistence mapping.
 - View: Renders dynamic HTML using Thymeleaf.
 
-Getting Started
+<h2>Getting Started</h2>
 Prerequisites
 - Java JDK
 - Maven
