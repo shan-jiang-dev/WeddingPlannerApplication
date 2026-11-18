@@ -45,5 +45,6 @@ Open your browser at http://localhost:8080.
 - Search and filtering
 - Automated testing
 
-Author
+<h2>Author</h2>
+
 Shan Jiang
