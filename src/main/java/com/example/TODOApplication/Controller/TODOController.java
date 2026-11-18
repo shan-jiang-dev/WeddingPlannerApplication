@@ -32,11 +32,10 @@ public class TODOController {
     // @ModelAttribute = Automatically binds the submitted form data to a Java object, modelAttributes contains all form data
     // @ResponseBody = Return data directly to the client. Without @ResponseBody => Return a view name for Spring to resolve.
 	@RequestMapping(value="/addtodo", method=RequestMethod.POST)
-	@ResponseBody
 	public String createTodo(@ModelAttribute Todo todo) {
 		
 		todoService.saveTodo(todo);
-		return "success";
+		return "redirect:/";
 		
 	}
 

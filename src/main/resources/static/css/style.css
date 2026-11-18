@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+body {
+    background-color: #F7F6F0;
+    font-family: 'Roboto', sans-serif;
+    background-image:
+        radial-gradient(circle at 5% 10%, #f3e1dc 0, transparent 15%),
+        radial-gradient(circle at 95% 15%, #e6eadc 0, transparent 18%),
+        radial-gradient(circle at 10% 90%, #f3e1dc 0, transparent 15%),
+        radial-gradient(circle at 90% 90%, #e6eadc 0, transparent 18%);
+    background-attachment: fixed;
+}
+.completed {
+    text-decoration: line-through;
+    color: #999;
+    opacity: 0.9;
+}
+h1 {
+    color: #76534a;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 30px;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+.wedding-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    color: #b89a5a;
+    border: 2px solid #b89a5a;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+.list-group-item {
+    background-color: #fff;
+    border: 1px solid #eee5dc;
+    padding: 15px;
+}
+.btn-subtle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Sage Green */
+.theme-success,
+.theme-primary {
+    background-color: #71815a;
+    color: white;
+}
+
+.theme-success:hover,
+.theme-primary:hover {
+    background-color: #87966f;
+    color: white;
+}
+
+/* Delete */
+.theme-danger {
+    color: #A45F55;
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.theme-danger:hover {
+    color: #803D35;
+}
+
+input[type="checkbox"] {
+    accent-color: #71815a;
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
