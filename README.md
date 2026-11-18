@@ -23,6 +23,26 @@ The application follows a layered architecture:
 - View: Renders dynamic HTML using Thymeleaf.
 
 <h2>Getting Started</h2>
+
 Prerequisites
 - Java JDK
 - Maven
+
+Run Locally
+
+git clone https://github.com/shan-jiang-dev/TODOApplication.git
+
+cd TODOApplication
+
+mvn spring-boot:run
+
+Open your browser at http://localhost:8080.
+	
+<h2>Future Enhancements</h2>
+- User authentication
+- Task priorities and due dates
+- Search and filtering
+- Automated testing
+
+Author
+Shan Jiang
