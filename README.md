@@ -34,7 +34,7 @@ Prerequisites
 
 Run Locally
 
-git clone https://github.com/shan-jiang-dev/TODOApplication.git
+git clone https://github.com/shan-jiang-dev/WeddingPlannerApplication.git
 
 cd TODOApplication
 
