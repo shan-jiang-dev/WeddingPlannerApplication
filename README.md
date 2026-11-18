@@ -39,6 +39,7 @@ mvn spring-boot:run
 Open your browser at http://localhost:8080.
 	
 <h2>Future Enhancements</h2>
+
 - User authentication
 - Task priorities and due dates
 - Search and filtering
